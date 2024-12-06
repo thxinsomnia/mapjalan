@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: GIS
+  version: 1.0.0
+servers:
+  - url: https://asia-southeast2-awangga.cloudfunctions.net
+paths:
+  /bayarin/data/get/roads:
+    post:
+      tags:
+        - default
+      summary: Roads
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                long: 107.5758500037501
+                lat: -6.874720427234501
+                max_distance: 1000
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /bayarin/data/get/region:
+    post:
+      tags:
+        - default
+      summary: Region
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                long: 107.5758500037501
+                lat: -6.874720427234501
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
